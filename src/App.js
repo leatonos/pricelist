@@ -32,7 +32,7 @@ function App() {
     e.preventDefault();
     //setResults([]);
     console.log("Searching for "+searchTerm);
-    Axios.post("https://price-list-sdcanada.herokuapp.com/api/search/",{searchTerm:searchTerm})
+    Axios.get("https://price-list-sdcanada.herokuapp.com/api/search",{ params: { answer: 42 } })
     .then(function(response){
       setResults(response.data)
       console.log("Search Done!")
