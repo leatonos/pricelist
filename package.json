@@ -35,12 +35,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "build":{ 
-    "command": "npm run build",
-  "commandOrigin": "ui",
-  "publish": "/opt/build/repo/build",
-  "publishOrigin": "ui"
   }
 
 }
