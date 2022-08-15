@@ -1,6 +1,6 @@
 import './App.css';
-import './bootstrap.css';
-import bootstrap from 'bootstrap'
+//import './bootstrap.css';
+//import bootstrap from 'bootstrap'
 import React, {useState, useEffect} from 'react';
 
 function PriceItem(props){

@@ -1,7 +1,7 @@
 import './App.css';
-import './bootstrap.css';
+//import './bootstrap.css';
 import PriceItem from './PriceItem';
-import bootstrap from 'bootstrap'
+//import bootstrap from 'bootstrap'
 import React, {useState, useEffect, useRef} from 'react';
 import Axios from 'axios';
 
@@ -11,7 +11,7 @@ function App() {
 
   //UseEffect Gets all the prices once you open the site
   useEffect(() => {
-    Axios.get("http://localhost:3001/api/getall").then((response) => {
+    Axios.get("https://price-list-sdcanada.herokuapp.com/api/getall").then((response) => {
       setResults(response.data)
     })
   },[]);
@@ -20,7 +20,7 @@ function App() {
   const refresh = () =>{
     setResults([]);
     console.log("Getting info...")
-    Axios.get("http://localhost:3001/api/getall")
+    Axios.get("https://price-list-sdcanada.herokuapp.com/api/getall")
     .then(function(response){
       setResults(response.data)
       console.log("Done!")
@@ -32,7 +32,7 @@ function App() {
     e.preventDefault();
     //setResults([]);
     console.log("Searching for "+searchTerm);
-    Axios.post("http://localhost:3001/api/search/"+searchTerm,{searchTerm:searchTerm})
+    Axios.post("https://price-list-sdcanada.herokuapp.com/api/search/"+searchTerm,{searchTerm:searchTerm})
     .then(function(response){
       setResults(response.data)
       console.log("Search Done!")
