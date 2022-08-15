@@ -1,7 +1,7 @@
 import './App.css';
 //import './bootstrap.css';
 import PriceItem from './PriceItem';
-//import bootstrap from 'bootstrap'
+import bootstrap from 'bootstrap'
 import React, {useState, useEffect, useRef} from 'react';
 import Axios from 'axios';
 
